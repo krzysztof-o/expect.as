@@ -37,7 +37,7 @@ expect({name: "Bruce Wayne"}).not.to.have.property("age");
 **have length**: asserts that array has length of given value
 ```actionscript
 expect([1, 2, 3]).to.have.length(3);
-expect([1, 2, 3]).to.have.length(0);
+expect([1, 2, 3]).not.to.have.length(0);
 ```
 
 **dispatch**: asserts that the event dispatcher dispatches given event type
