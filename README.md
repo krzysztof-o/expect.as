@@ -49,7 +49,7 @@ expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 ### TODO
 - ```expect({a: 1, b: 2}).to.have.length(2);```
 - ```expect({a: 1, b: 2}).to.contain("a");```
-- ```expect(function(){}).to.throws(Error);```
+- ```expect(function(){}).to.raise(Error);```
 - ```expect(starlingDispatcher).to.dispatch(CustomStarlingEvent.CUSTOM_TYPE);```
 - ```expect(100).not.to.strictly.equal("100");```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
