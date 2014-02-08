@@ -1,6 +1,6 @@
 package
 {
-    import expect.expect;
+    import specification.expect;
 
     import flash.events.Event;
     import flash.events.EventDispatcher;

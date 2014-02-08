@@ -1,8 +1,8 @@
-package expect.expression
+package specification.expression
 {
-    import expect.core.AbstractExpression;
-    import expect.core.ExpressionRoot;
-    import expect.flexunit.FlexUnitAsync;
+    import specification.core.AbstractExpression;
+    import specification.core.ExpressionRoot;
+    import specification.flexunit.FlexUnitAsync;
 
     import flash.events.Event;
     import flash.events.IEventDispatcher;

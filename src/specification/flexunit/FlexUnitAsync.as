@@ -1,4 +1,4 @@
-package expect.flexunit
+package specification.flexunit
 {
     import flash.events.Event;
     import flash.events.EventDispatcher;

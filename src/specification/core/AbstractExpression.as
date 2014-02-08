@@ -1,4 +1,4 @@
-package expect.core
+package specification.core
 {
     public class AbstractExpression
     {

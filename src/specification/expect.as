@@ -1,6 +1,6 @@
-package expect
+package specification
 {
-    import expect.core.ExpressionRoot;
+    import specification.core.ExpressionRoot;
 
     public function expect(expected:*):ExpressionRoot
     {

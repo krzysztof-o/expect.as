@@ -1,7 +1,7 @@
-package expect.expression
+package specification.expression
 {
-    import expect.core.AbstractExpression;
-    import expect.core.ExpressionRoot;
+    import specification.core.AbstractExpression;
+    import specification.core.ExpressionRoot;
 
     public class Be extends AbstractExpression
     {
