@@ -53,6 +53,7 @@ expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 - ```expect(starlingDispatcher).to.dispatch(CustomStarlingEvent.CUSTOM_TYPE);```
 - ```expect(100).not.to.strictly.equal("100");```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
+- ```expect("my@email.com").to.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}/);```
 
 ### Features / Goals
 - BDD-style
