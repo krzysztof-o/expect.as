@@ -59,6 +59,7 @@ expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 
 ### Features / Goals
 - BDD-style
+- Make use of IDE's code completion
 - Lightweight
 - Easy to use
 - Easy to extend
