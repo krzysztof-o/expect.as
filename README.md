@@ -3,7 +3,7 @@ expect.as
 
  BDD-style assertion library for Action Script 3
 
-![expect.as syntax](http://i.imgur.com/msb5Yq2.gif)
+![expect.as syntax](http://i.imgur.com/jxi6cj7.gif)
 
 ## API
 **ok**: asserts that the value is _truthy_ or not
