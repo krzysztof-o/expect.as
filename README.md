@@ -20,7 +20,7 @@ expect("test").not.to.equal(123);
 
 **be a / be an**: asserts that the value is instance of given class
 ```actionscript
-expect([1, 2, 3]).to.be.a(Number);
+expect(123).to.be.a(Number);
 expect("test").not.to.be.an(Array);
 ```
 
