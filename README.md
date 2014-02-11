@@ -48,7 +48,7 @@ expect(dispatcher).to.dispatch(Event.CHANGE);
 expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 ```
 
-**equal**: asserts that the values are strict equal (```===```)
+**strictly equal**: asserts that the values are strict equal (```===```)
 ```actionscript
 expect(123).to.strictly.equal(123);
 expect("123").not.to.strictly.equal(123);
