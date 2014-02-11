@@ -33,6 +33,11 @@ package specification.expression
             );
         }
 
+	    public function get strictly():Strict
+	    {
+		    return new Strict(expressionRoot);
+	    }
+
         public function get have():Have
         {
             return new Have(expressionRoot);

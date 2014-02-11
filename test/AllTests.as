@@ -56,6 +56,30 @@ package
             expect("test").to.equal(123);
         }
 
+	    [Test]
+	    public function expectStringToEqualNumber():void
+	    {
+		    expect(100).to.equal("100");
+	    }
+
+	    [Test]
+	    public function expectStringNotToStrictlyEqualNumber():void
+	    {
+		    expect(100).not.to.strictly.equal("100");
+	    }
+
+	    [Test]
+	    public function expectNumberToStrictlyEqualNumber():void
+	    {
+		    expect(100).to.strictly.equal(100);
+	    }
+
+	    [Test(expects="Error")]
+	    public function expectStringToStrictlyEqualNumber():void
+	    {
+		    expect(100).to.strictly.equal("100");
+	    }
+
         [Test(expects="Error")]
         public function expectNumberToBeAString():void
         {
