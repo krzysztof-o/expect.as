@@ -26,16 +26,16 @@ package
             expect(false).to.be.ok();
         }
 
-        [Init]
+        [Test]
         public function expectTrueToEqualTrue():void
         {
             expect(true).to.equal(true);
         }
 
-        [Init]
+        [Test]
         public function expectTrueNotToEqualFalse():void
         {
-            expect(true).to.equal(false);
+            expect(true).not.to.equal(false);
         }
 
         [Test]
