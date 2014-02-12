@@ -47,5 +47,14 @@ package specification.expression
         {
             return new Dispatch(expressionRoot, expected, eventType);
         }
+
+	    public function match(regExp:RegExp):void
+	    {
+		    assert(
+				    regExp.exec(expected),
+				    "expected " + expected + " to match " + regExp,
+				    "expected " + expected + " not to match " + regExp
+		    );
+	    }
     }
 }

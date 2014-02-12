@@ -48,10 +48,16 @@ expect(dispatcher).to.dispatch(Event.CHANGE);
 expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 ```
 
-**strictly equal**: asserts that the values are strict equal (```===```)
+**strictly equal**: asserts that the values are strictly equal (```===```)
 ```actionscript
 expect(123).to.strictly.equal(123);
 expect("123").not.to.strictly.equal(123);
+```
+
+**match**: asserts that the value matches given regular expression
+```actionscript
+expect("foo@bar.com").to.match(/[a-z0=9.]+@[a-z0=9.]+.[a-z]{2,4}/);
+expect("incorrect@email@address.com").not.to.match(/[a-z0=9.]+@[a-z0=9.]+.[a-z]{2,4}/);
 ```
 
 
@@ -61,7 +67,6 @@ expect("123").not.to.strictly.equal(123);
 - ```expect(function(){}).to.raise(Error);```
 - ```expect(starlingDispatcher).to.dispatch(CustomStarlingEvent.CUSTOM_TYPE);```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
-- ```expect("my@email.com").to.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}/);```
 
 ### Features / Goals
 - BDD-style
