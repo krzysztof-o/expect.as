@@ -64,7 +64,6 @@ expect("incorrect@email@address.com").not.to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{
 
 ### TODO
 - ```expect({a: 1, b: 2}).to.have.length(2);```
-- ```expect({a: 1, b: 2}).to.contain("a");```
 - ```expect(function(){}).to.raise(Error);```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
 
