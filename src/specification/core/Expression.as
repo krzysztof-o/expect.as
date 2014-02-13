@@ -1,10 +1,10 @@
 package specification.core
 {
-    public class AbstractExpression
+    public class Expression
     {
-        protected var expressionRoot:ExpressionRoot;
+        protected var expressionRoot:RootExpression;
 
-        public function AbstractExpression(expressionRoot:ExpressionRoot)
+        public function Expression(expressionRoot:RootExpression)
         {
             this.expressionRoot = expressionRoot;
         }
@@ -19,14 +19,5 @@ package specification.core
             expressionRoot.assert(value, descriptionPositive, descriptionNegative);
         }
 
-        protected function fail(description:String = ""):void
-        {
-            expressionRoot.fail(description);
-        }
-
-        protected function pass(description:String = ""):void
-        {
-            expressionRoot.pass(description);
-        }
     }
 }

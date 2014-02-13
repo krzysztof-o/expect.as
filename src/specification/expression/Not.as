@@ -1,11 +1,11 @@
 package specification.expression
 {
-    import specification.core.AbstractExpression;
-    import specification.core.ExpressionRoot;
+    import specification.core.Expression;
+    import specification.core.RootExpression;
 
-    public class Not extends AbstractExpression
+    public class Not extends Expression
     {
-        public function Not(expressionRoot:ExpressionRoot)
+        public function Not(expressionRoot:RootExpression)
         {
             super(expressionRoot);
             expressionRoot.negation = true;

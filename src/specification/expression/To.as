@@ -1,11 +1,11 @@
 package specification.expression
 {
-    import specification.core.AbstractExpression;
-    import specification.core.ExpressionRoot;
+	import specification.core.Expression;
+	import specification.core.RootExpression;
 
-    public class To extends AbstractExpression
+    public class To extends Expression
     {
-        public function To(expressionRoot:ExpressionRoot)
+        public function To(expressionRoot:RootExpression)
         {
             super(expressionRoot);
         }

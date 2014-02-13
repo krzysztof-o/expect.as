@@ -16,7 +16,7 @@ package
 		public function expectDispatcherToDispatch():void
 		{
 			var dispatcher:EventDispatcher = new EventDispatcher();
-			expect(dispatcher).to.dispatch("testEvent").inFlexUnitTest(this);
+			expect(dispatcher).to.dispatch("testEvent").async(this);
 			setTimeout(function ():void
 			{
 				dispatcher.dispatchEvent(new Event("testEvent"));
@@ -27,14 +27,14 @@ package
 		public function expectDispatcherToDispatchButDidNot():void
 		{
 			var dispatcher:EventDispatcher = new EventDispatcher();
-			expect(dispatcher).to.dispatch("testEvent").inFlexUnitTest(this);
+			expect(dispatcher).to.dispatch("testEvent").async(this);
 		}
 
 		[Test(async, expects="Error")]
 		public function expectDispatcherNotToDispatchButDispatched():void
 		{
 			var dispatcher:EventDispatcher = new EventDispatcher();
-			expect(dispatcher).not.to.dispatch("testEvent").inFlexUnitTest(this);
+			expect(dispatcher).not.to.dispatch("testEvent").async(this);
 			setTimeout(function ():void
 			{
 				dispatcher.dispatchEvent(new Event("testEvent"));
@@ -45,7 +45,7 @@ package
 		public function expectDispatcherNotToDispatchButDidNot():void
 		{
 			var dispatcher:EventDispatcher = new EventDispatcher();
-			expect(dispatcher).not.to.dispatch("testEvent").inFlexUnitTest(this);
+			expect(dispatcher).not.to.dispatch("testEvent").async(this);
 		}
 	}
 }

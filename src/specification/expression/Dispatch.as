@@ -1,20 +1,18 @@
 package specification.expression
 {
-    import specification.core.AbstractExpression;
-    import specification.core.ExpressionRoot;
-    import specification.flexunit.FlexUnitAsync;
+	import specification.core.AsyncExpression;
+
+    import specification.core.RootExpression;
 
     import flash.utils.clearTimeout;
     import flash.utils.setTimeout;
 
-    public class Dispatch extends AbstractExpression
+    public class Dispatch extends AsyncExpression
     {
-        private var delay:Number;
         private var timeout:Number;
         private var eventType:String;
-        private var flexUnitAsync:FlexUnitAsync;
 
-        public function Dispatch(expressionRoot:ExpressionRoot, eventType:String)
+        public function Dispatch(expressionRoot:RootExpression, eventType:String)
         {
             super(expressionRoot);
             this.eventType = eventType;
@@ -24,7 +22,6 @@ package specification.expression
 
         private function init():void
         {
-            flexUnitAsync = new FlexUnitAsync();
             expected.addEventListener(eventType, onEvent);
             before(1000);
         }
@@ -41,13 +38,11 @@ package specification.expression
         {
             if (expressionRoot.negation)
             {
-                flexUnitAsync.pass();
-                //pass("expected event type " + eventType + " has not been dispatched");
+                pass();
             }
             else
             {
-                flexUnitAsync.fail();
-                //fail("expected event type " + eventType + " has not been dispatched");
+                fail();
             }
             dispose();
         }
@@ -62,21 +57,14 @@ package specification.expression
         {
             if (expressionRoot.negation)
             {
-                flexUnitAsync.fail();
-                //fail("expected event type " + eventType + " has been dispatched");
+                fail();
             }
             else
             {
-                flexUnitAsync.pass();
-                //pass("expected event type " + eventType + " has been dispatched");
+                pass();
             }
             dispose();
 
-        }
-
-        public function inFlexUnitTest(testCase:Object):void
-        {
-            flexUnitAsync.init(testCase, delay);
         }
     }
 }

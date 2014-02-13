@@ -1,9 +1,9 @@
 package specification
 {
-    import specification.core.ExpressionRoot;
+	import specification.expression.Expect;
 
-    public function expect(expected:*):ExpressionRoot
+	public function expect(expected:*):Expect
     {
-        return new ExpressionRoot(expected);
+        return new Expect(expected);
     }
 }

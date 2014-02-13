@@ -1,13 +1,11 @@
 package specification.core
 {
-    import specification.expression.*;
-
-    public class ExpressionRoot
+    public class RootExpression
     {
-        private var _expected:*;
-        private var _negation:Boolean;
+	    private var _expected:*;
+	    private var _negation:Boolean;
 
-        public function ExpressionRoot(expected:*)
+        public function RootExpression(expected:*)
         {
             _expected = expected;
             _negation = false;
@@ -28,37 +26,13 @@ package specification.core
             _negation = value;
         }
 
-        public function get to():To
-        {
-            return new To(this);
-        }
-
-        public function get not():Not
-        {
-            return new Not(this);
-        }
-
         public function assert(value:Boolean, descriptionPositive:String, descriptionNegative:String):void
         {
             var description:String = getDescription(descriptionPositive, descriptionNegative);
-            if (checkValue(value))
+            if (!checkValue(value))
             {
-                pass(description);
+	            throw new Error(description);
             }
-            else
-            {
-                fail(description);
-            }
-        }
-
-        public function fail(description:String):void
-        {
-            throw new Error(description);
-        }
-
-        public function pass(description:String):void
-        {
-
         }
 
         private function checkValue(value:Boolean):Boolean
