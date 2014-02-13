@@ -42,9 +42,10 @@ expect([1, 2, 3]).to.have.length(3);
 expect([1, 2, 3]).not.to.have.length(0);
 ```
 
-**dispatch**: asserts that the event dispatcher dispatches given event type
+**dispatch**: asserts that the event dispatcher dispatches given event type (works also with Starling EventDispatcher)
 ```actionscript
 expect(dispatcher).to.dispatch(Event.CHANGE);
+expect(starlingDispatcher).to.dispatch(EnterFrameEvent.ENTER_FRAME);
 expect(dispatcher).not.to.dispatch(CustomEvent.CUSTOM_TYPE);
 ```
 
@@ -56,8 +57,8 @@ expect("123").not.to.strictly.equal(123);
 
 **match**: asserts that the value matches given regular expression
 ```actionscript
-expect("foo@bar.com").to.match(/[a-z0=9.]+@[a-z0=9.]+.[a-z]{2,4}/);
-expect("incorrect@email@address.com").not.to.match(/[a-z0=9.]+@[a-z0=9.]+.[a-z]{2,4}/);
+expect("foo@bar.com").to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
+expect("incorrect@email@address.com").not.to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
 ```
 
 
@@ -65,15 +66,11 @@ expect("incorrect@email@address.com").not.to.match(/[a-z0=9.]+@[a-z0=9.]+.[a-z]{
 - ```expect({a: 1, b: 2}).to.have.length(2);```
 - ```expect({a: 1, b: 2}).to.contain("a");```
 - ```expect(function(){}).to.raise(Error);```
-- ```expect(starlingDispatcher).to.dispatch(CustomStarlingEvent.CUSTOM_TYPE);```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
 
 ### Features / Goals
 - BDD-style
 - Make use of IDE's code completion
-- Lightweight
-- Easy to use
-- Easy to extend
 - Compatible with FlexUnit
 
 ### Inspirations

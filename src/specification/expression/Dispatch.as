@@ -4,8 +4,6 @@ package specification.expression
     import specification.core.ExpressionRoot;
     import specification.flexunit.FlexUnitAsync;
 
-    import flash.events.Event;
-    import flash.events.IEventDispatcher;
     import flash.utils.clearTimeout;
     import flash.utils.setTimeout;
 
@@ -14,13 +12,11 @@ package specification.expression
         private var delay:Number;
         private var timeout:Number;
         private var eventType:String;
-        private var dispatcher:IEventDispatcher;
         private var flexUnitAsync:FlexUnitAsync;
 
-        public function Dispatch(expressionRoot:ExpressionRoot, dispatcher:IEventDispatcher, eventType:String)
+        public function Dispatch(expressionRoot:ExpressionRoot, eventType:String)
         {
             super(expressionRoot);
-            this.dispatcher = dispatcher;
             this.eventType = eventType;
 
             init();
@@ -29,7 +25,7 @@ package specification.expression
         private function init():void
         {
             flexUnitAsync = new FlexUnitAsync();
-            dispatcher.addEventListener(eventType, onEvent);
+            expected.addEventListener(eventType, onEvent);
             before(1000);
         }
 
@@ -46,33 +42,33 @@ package specification.expression
             if (expressionRoot.negation)
             {
                 flexUnitAsync.pass();
-                pass("expected event type " + eventType + " has not been dispatched");
+                //pass("expected event type " + eventType + " has not been dispatched");
             }
             else
             {
                 flexUnitAsync.fail();
-                fail("expected event type " + eventType + " has not been dispatched");
+                //fail("expected event type " + eventType + " has not been dispatched");
             }
             dispose();
         }
 
         private function dispose():void
         {
-            dispatcher.removeEventListener(eventType, onEvent);
+            expected.removeEventListener(eventType, onEvent);
             clearTimeout(timeout);
         }
 
-        private function onEvent(event:Event):void
+        private function onEvent(event:*):void
         {
             if (expressionRoot.negation)
             {
                 flexUnitAsync.fail();
-                fail("expected event type " + eventType + " has been dispatched");
+                //fail("expected event type " + eventType + " has been dispatched");
             }
             else
             {
                 flexUnitAsync.pass();
-                pass("expected event type " + eventType + " has been dispatched");
+                //pass("expected event type " + eventType + " has been dispatched");
             }
             dispose();
 

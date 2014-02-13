@@ -45,7 +45,7 @@ package specification.expression
 
         public function dispatch(eventType:String):Dispatch
         {
-            return new Dispatch(expressionRoot, expected, eventType);
+            return new Dispatch(expressionRoot, eventType);
         }
 
 	    public function match(regExp:RegExp):void
