@@ -25,14 +25,14 @@ package specification.core
 			Async.failOnEvent(testCase, dispatcher, ASYNC_FAIL, delay + 100);
 		}
 
+		override protected function fail(description:String = ""):void
+		{
+			dispatcher.dispatchEvent(new Event(ASYNC_FAIL));
+		}
+
 		public function pass():void
 		{
 			dispatcher.dispatchEvent(new Event(ASYNC_PASS));
-		}
-
-		public function fail():void
-		{
-			dispatcher.dispatchEvent(new Event(ASYNC_FAIL));
 		}
 	}
 }

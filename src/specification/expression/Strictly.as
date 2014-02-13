@@ -3,13 +3,12 @@ package specification.expression
 	import specification.core.Expression;
 	import specification.core.RootExpression;
 
-	public class Strict extends Expression
+	public class Strictly extends Expression
 	{
-		public function Strict(expressionRoot:RootExpression)
+		public function Strictly(expressionRoot:RootExpression)
 		{
 			super(expressionRoot);
 		}
-
 
 		public function equal(given:*):void
 		{
