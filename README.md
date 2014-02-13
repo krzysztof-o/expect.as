@@ -73,6 +73,7 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 ### TODO
 - ```expect({a: 1, b: 2}).to.have.length(2);```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
+- ```expect(sptire).to.contain(anotherSprite);```
 
 ### Features / Goals
 - BDD-style
