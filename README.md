@@ -36,10 +36,11 @@ expect({name: "Bruce Wayne"}).to.have.property("name");
 expect({name: "Bruce Wayne"}).not.to.have.property("age");
 ```
 
-**have length**: asserts that array has length of given value
+**have length**: asserts that array has length of given array or object
 ```actionscript
 expect([1, 2, 3]).to.have.length(3);
 expect([1, 2, 3]).not.to.have.length(0);
+expect({a: 10, b: 20, c: 30}).to.have.length(3);
 ```
 
 **dispatch**: asserts that the event dispatcher dispatches given event type (works also with Starling EventDispatcher)
@@ -71,9 +72,8 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 
 
 ### TODO
-- ```expect({a: 1, b: 2}).to.have.length(2);```
 - ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
-- ```expect(sprite).to.contain(anotherSprite);```
+- ```expect(sptire).to.contain(anotherSprite);```
 
 ### Features / Goals
 - BDD-style
