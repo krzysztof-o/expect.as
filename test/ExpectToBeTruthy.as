@@ -2,9 +2,9 @@ package
 {
 	import specification.expect;
 
-	public class ExpectToBeTrue
+	public class ExpectToBeTruthy
 	{
-		public function ExpectToBeTrue()
+		public function ExpectToBeTruthy()
 		{
 		}
 
@@ -33,7 +33,7 @@ package
 		}
 
 		[Test(expects="specification.core.ExpectationError")]
-		public function expectFalseToBeOk():void
+		public function expectFalseToBeTruthy():void
 		{
 			expect(false).to.be.truthy();
 		}
