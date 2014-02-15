@@ -27,6 +27,12 @@ expect(false).to.be.falsy();
 expect(1).not.to.be.falsy();
 ```
 
+**undef**: asserts that the value is undefined
+```actionscript
+expect(undefined).to.be.undef();
+expect(100).not.to.be.undef();
+```
+
 **equal**: asserts that the values are equal (```==```)
 ```actionscript
 expect(123).to.equal(123);

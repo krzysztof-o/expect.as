@@ -50,8 +50,17 @@ package specification.expression
 		{
 			assert(
 					expected == false,
-					"expected " + expected + " to be truthy",
-					"expected " + expected + " to be falsy"
+					"expected " + expected + " to be falsy",
+					"expected " + expected + " to be truthy"
+			);
+		}
+
+		public function undef():void
+		{
+			assert(
+					expected === undefined,
+					"expected " + expected + " to be undefined",
+					"expected " + expected + " not to be undefined"
 			);
 		}
 	}
