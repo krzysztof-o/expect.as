@@ -15,10 +15,16 @@ expect(null).not.to.be.ok();
 expect(undefined).not.to.be.ok();
 ```
 
-**truthy**: asserts that the values equals true
+**truthy**: asserts that the value equals true
 ```actionscript
 expect(true).to.be.truthy();
 expect(0).not.to.be.truthy();
+```
+
+**false**: asserts that the value equals false
+```actionscript
+expect(false).to.be.falsy();
+expect(1).not.to.be.falsy();
 ```
 
 **equal**: asserts that the values are equal (```==```)
