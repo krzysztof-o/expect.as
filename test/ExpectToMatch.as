@@ -20,7 +20,7 @@ package
 			expect("foo@@bar.com").not.to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectIncorrectStringToMatchRegexp():void
 		{
 			expect("foo@@bar.com").to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);

@@ -32,7 +32,7 @@ package
 			expect("test").not.to.equal("failed test");
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectStringNotToEqualNumber():void
 		{
 			expect("test").to.equal(123);

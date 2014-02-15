@@ -20,7 +20,7 @@ package
 			expect([1, 2, 3]).to.be.an(Array);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectNumberToBeAString():void
 		{
 			expect(1).to.be.a(String);
@@ -38,7 +38,7 @@ package
 			expect(1).not.to.be.an(Array);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectStringToBeAnArray():void
 		{
 			expect("test").to.be.an(Array);

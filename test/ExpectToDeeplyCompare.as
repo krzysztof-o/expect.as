@@ -20,7 +20,7 @@ package
 			expect({a: 10, b: 20, c: {d: 30, e: [1, 2, 3]}}).not.to.deeply.equal({a: 10, b: 20, c: {d: 30, e: [1, 2]}});
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectedObjectToDeeplyAnotherObject():void
 		{
 			expect({a: 10, b: 20, c: {d: 30, e: [1, 2, 3]}}).to.deeply.equal({a: 20, b: 20, c: {d: 30, e: [1, 2, 3]}});

@@ -20,7 +20,7 @@ package
 			expect(100).to.strictly.equal(100);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectStringToStrictlyEqualNumber():void
 		{
 			expect(100).to.strictly.equal("100");

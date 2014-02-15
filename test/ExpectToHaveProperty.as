@@ -20,7 +20,7 @@ package
 			expect({a: "test"}).not.to.have.property("b");
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectObjectToHaveNonExistingProperty():void
 		{
 			expect({a: "test"}).to.have.property("b");

@@ -32,7 +32,7 @@ package
 			expect(raiseArgumentError).to.raise(Error);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectFunctionToRaiseArgumentErrorIncorrectType():void
 		{
 			expect(raiseError).to.raise(ArgumentError);
@@ -62,7 +62,7 @@ package
 			expect(raiseArgumentError).to.raise(Error, /[a-zA-Z]/);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectFunctionToRaiseArgumentErrorIncorrectTypeWithMessageRegExp():void
 		{
 			expect(raiseError).to.raise(ArgumentError, /[a-zA-Z]/);
@@ -92,7 +92,7 @@ package
 			expect(raiseArgumentError).to.raise(Error, "testArgumentError");
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectFunctionToRaiseArgumentErrorIncorrectTypeWithMessage():void
 		{
 			expect(raiseError).to.raise(ArgumentError, "testArgumentError");

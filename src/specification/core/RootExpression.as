@@ -37,7 +37,7 @@ package specification.core
 
 		public function fail(description:String):void
 		{
-			throw new Error(description);
+			throw new ExpectationError(description);
 		}
 
 		private function checkValue(value:Boolean):Boolean

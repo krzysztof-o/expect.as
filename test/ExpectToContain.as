@@ -20,7 +20,7 @@ package
 			expect([1, 2, 3]).not.to.contain(4);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectArrayToContainNonExistingValue():void
 		{
 			expect([1, 2, 3]).to.contain(4);

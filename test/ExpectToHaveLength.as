@@ -20,7 +20,7 @@ package
 			expect([1, 2, 3]).not.to.have.length(2);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectArrayToHaveIncorrectLength():void
 		{
 			expect([1, 2, 3]).to.have.length(4);
@@ -50,7 +50,7 @@ package
 			expect({}).to.have.length(0);
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectObjectToHaveIncorrectLength():void
 		{
 			expect({a: 10, b: 20, c: 30}).to.have.length(4);

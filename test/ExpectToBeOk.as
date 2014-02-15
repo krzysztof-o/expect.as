@@ -20,7 +20,7 @@ package
 			expect(false).not.to.be.ok();
 		}
 
-		[Test(expects="Error")]
+		[Test(expects="specification.core.ExpectationError")]
 		public function expectFalseToBeOk():void
 		{
 			expect(false).to.be.ok();
