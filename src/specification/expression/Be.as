@@ -36,5 +36,14 @@ package specification.expression
 					"expected " + expected + " to be falsy"
 			);
 		}
+
+		public function truthy():void
+		{
+			assert(
+					expected == true,
+					"expected " + expected + " to be truthy",
+					"expected " + expected + " to be falsy"
+			);
+		}
 	}
 }
