@@ -122,6 +122,13 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 
 
 ### TODO
+- ```expect(10).to.be.above(5);```
+- ```expect(5).to.be.below(10);```
+- ```expect(5).to.be.at.least(5);```
+- ```expect(10).to.be.at.most(10);```
+- ```expect(10).to.be.between(5, 10);```
+- ```expect(1.5).to.be.close.to(1, .5);```
+- ```expect(1).to.satisfy(function(num) { return num > 0; });```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals
