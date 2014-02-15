@@ -33,6 +33,12 @@ expect(undefined).to.be.undef();
 expect(100).not.to.be.undef();
 ```
 
+**nill**: asserts that the value is undefined
+```actionscript
+expect(undefined).to.be.nill();
+expect(100).not.to.be.nill();
+```
+
 **equal**: asserts that the values are equal (```==```)
 ```actionscript
 expect(123).to.equal(123);

@@ -63,5 +63,14 @@ package specification.expression
 					"expected " + expected + " not to be undefined"
 			);
 		}
+
+		public function nill():void
+		{
+			assert(
+					expected === null,
+					"expected " + expected + " to be null",
+					"expected " + expected + " not to be null"
+			);
+		}
 	}
 }
