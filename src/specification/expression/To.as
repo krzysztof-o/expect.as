@@ -1,7 +1,5 @@
 package specification.expression
 {
-	import avmplus.getQualifiedClassName;
-
 	import flash.display.DisplayObjectContainer;
 
 	import specification.core.Expression;
