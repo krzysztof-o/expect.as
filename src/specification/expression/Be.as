@@ -31,7 +31,7 @@ package specification.expression
 		public function ok():void
 		{
 			assert(
-					expected == true,
+					expected,
 					"expected " + expected + " to be truthy",
 					"expected " + expected + " to be falsy"
 			);

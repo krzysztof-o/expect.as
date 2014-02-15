@@ -20,6 +20,30 @@ package
 			expect(false).not.to.be.ok();
 		}
 
+		[Test]
+		public function expectStringToBeOk():void
+		{
+			expect("everything").to.be.ok();
+		}
+
+		[Test]
+		public function expectNumberToBeOk():void
+		{
+			expect(1).to.be.ok();
+		}
+
+		[Test]
+		public function expectUndefinedToBeNotOk():void
+		{
+			expect(undefined).not.to.be.ok();
+		}
+
+		[Test]
+		public function expectNullToBeNotOk():void
+		{
+			expect(null).not.to.be.ok();
+		}
+
 		[Test(expects="specification.core.ExpectationError")]
 		public function expectFalseToBeOk():void
 		{

@@ -10,6 +10,9 @@ expect.as
 ```actionscript
 expect(true).to.be.ok();
 expect(false).not.to.be.ok();
+expect("everything").to.be.ok();
+expect(null).not.to.be.ok();
+expect(undefined).not.to.be.ok();
 ```
 
 **equal**: asserts that the values are equal (```==```)
