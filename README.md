@@ -56,6 +56,12 @@ expect(123).to.strictly.equal(123);
 expect("123").not.to.strictly.equal(123);
 ```
 
+**deeply equal**: asserts that the values are deeply equal
+```actionscript
+expect({a: 1, b: {c: "test", d: [1, 2, 3}}).to.deeply.equal({a: 1, b: {c: "test", d: [1, 2, 3}});
+expect({a: 1, b: {c: "test", d: [1, 2, 3}}).not.to.strictly.equal({a: 1, b: {c: "failing test", d: [1, 2, 3}});
+```
+
 **match**: asserts that the value matches given regular expression
 ```actionscript
 expect("foo@bar.com").to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
@@ -72,7 +78,6 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 
 
 ### TODO
-- ```expect({a: 1, b: {c: 2}).to.deep.equal({a: 1, b: {c: 2}});```
 - ```expect(sptire).to.contain(anotherSprite);```
 
 ### Features / Goals

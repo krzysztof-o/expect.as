@@ -20,6 +20,11 @@ package specification.expression
 			return new Strictly(expressionRoot);
 		}
 
+		public function get deeply():Deeply
+		{
+			return new Deeply(expressionRoot);
+		}
+
 		public function get have():Have
 		{
 			return new Have(expressionRoot);
