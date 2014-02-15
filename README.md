@@ -33,7 +33,7 @@ expect(undefined).to.be.undef();
 expect(100).not.to.be.undef();
 ```
 
-**nill**: asserts that the value is undefined
+**nill**: asserts that the value is null
 ```actionscript
 expect(undefined).to.be.nill();
 expect(100).not.to.be.nill();
