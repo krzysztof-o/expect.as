@@ -28,6 +28,8 @@ expect("test").not.to.be.an(Array);
 ```actionscript
 expect([1, 2, 3]).to.contain(1);
 expect([1, 2, 3]).not.to.contain(4);
+expect(sprite).to.contain(anotherSprite);
+expect(starlingSprite).not.to.contain(anotherStarlingSprite);
 ```
 
 **have property**: asserts that the value has own property
@@ -78,7 +80,6 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 
 
 ### TODO
-- ```expect(sprite).to.contain(anotherSprite);```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals

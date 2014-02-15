@@ -1,7 +1,11 @@
 package specification.expression
 {
+	import flash.display.DisplayObjectContainer;
+
 	import specification.core.Expression;
 	import specification.core.RootExpression;
+
+	import starling.display.DisplayObjectContainer;
 
 	public class To extends Expression
 	{
@@ -41,11 +45,26 @@ package specification.expression
 
 		public function contain(element:*):void
 		{
+			var contain:Boolean = checkContain(expected, element);
 			assert(
-					expected.indexOf(element) >= 0,
+					contain,
 					"expected " + expected + " contain " + element,
 					"expected " + expected + " not to contain " + element
 			);
+		}
+
+		private static function checkContain(expected:*, element:*):Boolean
+		{
+			if (expected is Array)
+			{
+				return expected.indexOf(element) >= 0;
+			}
+			if (expected is flash.display.DisplayObjectContainer || expected is starling.display.DisplayObjectContainer)
+			{
+				return element.parent == expected;
+			}
+
+			return false;
 		}
 
 		public function dispatch(eventType:String):Dispatch
