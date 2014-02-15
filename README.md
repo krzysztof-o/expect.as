@@ -78,7 +78,7 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 
 
 ### TODO
-- ```expect(sptire).to.contain(anotherSprite);```
+- ```expect(sprite).to.contain(anotherSprite);```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals
