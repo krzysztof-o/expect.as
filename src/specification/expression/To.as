@@ -83,6 +83,15 @@ package specification.expression
 			);
 		}
 
+		public function exist():void
+		{
+			assert(
+					expected !== null && expected !== undefined,
+					"expected " + expected + " to exist",
+					"expected " + expected + " not to exist"
+			);
+		}
+
 		public function raise(errorType:Class = null, message:* = null):void
 		{
 			errorType ||= Error;

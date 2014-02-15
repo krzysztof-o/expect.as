@@ -39,6 +39,13 @@ expect(undefined).to.be.nill();
 expect(100).not.to.be.nill();
 ```
 
+**exist**: asserts that the value is not null or undefined
+```actionscript
+expect(null).not.to.be.exist();
+expect(undefined).not.to.be.exist();
+expect(100).to.be.exist();
+```
+
 **equal**: asserts that the values are equal (```==```)
 ```actionscript
 expect(123).to.equal(123);
