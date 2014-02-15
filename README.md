@@ -46,6 +46,13 @@ expect(undefined).not.to.be.exist();
 expect(100).to.be.exist();
 ```
 
+**empty**: asserts that the value is empty
+```actionscript
+expect([]).to.be.empty();
+expect({}).to.be.empty();
+expect("").to.be.empty();
+```
+
 **equal**: asserts that the values are equal (```==```)
 ```actionscript
 expect(123).to.equal(123);
@@ -60,8 +67,8 @@ expect("test").not.to.be.an(Array);
 
 **contain**: asserts that the array contains value
 ```actionscript
-expect([1, 2, 3]).to.contain(1);
-expect([1, 2, 3]).not.to.contain(4);
+expect([1, 2, 3]).to.contain(2);
+expect("one two three").not.to.contain("four");
 expect(sprite).to.contain(anotherSprite);
 expect(starlingSprite).not.to.contain(anotherStarlingSprite);
 ```
@@ -77,6 +84,7 @@ expect({name: "Bruce Wayne"}).not.to.have.property("age");
 expect([1, 2, 3]).to.have.length(3);
 expect([1, 2, 3]).not.to.have.length(0);
 expect({a: 10, b: 20, c: 30}).to.have.length(3);
+expect("test").to.have.length(4);
 ```
 
 **dispatch**: asserts that the event dispatcher dispatches given event type (works also with Starling EventDispatcher)

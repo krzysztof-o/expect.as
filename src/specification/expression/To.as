@@ -57,7 +57,7 @@ package specification.expression
 
 		private static function checkContain(expected:*, element:*):Boolean
 		{
-			if (expected is Array)
+			if (expected is Array || expected is String)
 			{
 				return expected.indexOf(element) >= 0;
 			}

@@ -1,6 +1,7 @@
 package specification.expression
 {
 	import specification.core.Expression;
+	import specification.core.ObjectUtil;
 	import specification.core.RootExpression;
 
 	public class Be extends Expression
@@ -70,6 +71,15 @@ package specification.expression
 					expected === null,
 					"expected " + expected + " to be null",
 					"expected " + expected + " not to be null"
+			);
+		}
+
+		public function empty():void
+		{
+			assert(
+					ObjectUtil.getLength(expected) == 0,
+					"expected " + expected + " to be empty",
+					"expected " + expected + " not to be empty"
 			);
 		}
 	}

@@ -20,6 +20,12 @@ package
 			expect([1, 2, 3]).not.to.have.length(2);
 		}
 
+		[Test]
+		public function expectStringNotToHaveLength():void
+		{
+			expect("test").to.have.length(4);
+		}
+
 		[Test(expects="specification.core.ExpectationError")]
 		public function expectArrayToHaveIncorrectLength():void
 		{

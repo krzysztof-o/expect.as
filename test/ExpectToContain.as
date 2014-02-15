@@ -20,6 +20,18 @@ package
 			expect([1, 2, 3]).not.to.contain(4);
 		}
 
+		[Test]
+		public function expectStringToContain():void
+		{
+			expect("one two three").to.contain("two");
+		}
+
+		[Test]
+		public function expectStringNotToContain():void
+		{
+			expect("one two three").not.to.contain("four");
+		}
+
 		[Test(expects="specification.core.ExpectationError")]
 		public function expectArrayToContainNonExistingValue():void
 		{
