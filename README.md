@@ -102,7 +102,7 @@ expect("123").not.to.strictly.equal(123);
 
 **deeply equal**: asserts that the values are deeply equal
 ```actionscript
-expect({a: 1, b: {c: "test", d: [1, 2, 3}}).to.deeply.equal({a: 1, b: {c: "test", d: [1, 2, 3}});
+expect({a: 1, b: {c: "test", d: [1, 2, 3]}).to.deeply.equal({a: 1, b: {c: "test", d: [1, 2, 3]});
 ```
 
 **match**: asserts that the value matches given regular expression
