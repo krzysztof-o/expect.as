@@ -103,13 +103,11 @@ expect("123").not.to.strictly.equal(123);
 **deeply equal**: asserts that the values are deeply equal
 ```actionscript
 expect({a: 1, b: {c: "test", d: [1, 2, 3}}).to.deeply.equal({a: 1, b: {c: "test", d: [1, 2, 3}});
-expect({a: 1, b: {c: "test", d: [1, 2, 3}}).not.to.strictly.equal({a: 1, b: {c: "failing test", d: [1, 2, 3}});
 ```
 
 **match**: asserts that the value matches given regular expression
 ```actionscript
 expect("foo@bar.com").to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
-expect("incorrect@email@address.com").not.to.match(/[a-z0-9.]+@[a-z0-9.]+.[a-z]{2,4}/);
 ```
 
 **raise**: asserts that the value matches given regular expression
@@ -120,6 +118,11 @@ expect(yetAnotherFunction).not.to.raise(Error, /[a-zA-Z]/);
 expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 ```
 
+**closeTo**: asserts that the expected is equal given value, to within a +/- `delta` range
+```actionscript
+expect(2).to.be.closeTo(1.5, .5);
+```
+
 
 ### TODO
 - ```expect(10).to.be.above(5);```
@@ -127,8 +130,6 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```
 - ```expect(10).to.be.between(5, 10);```
-- ```expect(1.5).to.be.close.to(1, .5);```
-- ```expect(1).to.satisfy(function(num) { return num > 0; });```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals

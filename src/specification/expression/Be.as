@@ -82,5 +82,14 @@ package specification.expression
 					"expected " + expected + " not to be empty"
 			);
 		}
+
+		public function closeTo(value:Number, delta:Number):void
+		{
+			assert(
+					Math.abs(expected - value) <= delta,
+					"expected " + expected + " to be close to " + value + " +/- " + delta,
+					"expected " + expected + " not to be close to " + value + " +/- " + delta
+			);
+		}
 	}
 }
