@@ -123,13 +123,20 @@ expect(yetAnotherFunction).to.raise(Error, "Unexpected error");
 expect(2).to.be.closeTo(1.5, .5);
 ```
 
+**between**: asserts that the value is between given numbers
+```actionscript
+expect(2).to.be.between(1, 3);
+expect(2).to.be.between(1, 2, true); //3rd parameter means strong inequality
+```
+
 
 ### TODO
 - ```expect(10).to.be.above(5);```
 - ```expect(5).to.be.below(10);```
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```
-- ```expect(10).to.be.between(5, 10);```
+- ```expect().fail();```
+- ```expect(sprite).to.be.a("flash.display::Sprite");```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals

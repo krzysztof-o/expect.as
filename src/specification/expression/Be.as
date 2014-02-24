@@ -91,5 +91,23 @@ package specification.expression
 					"expected " + expected + " not to be close to " + value + " +/- " + delta
 			);
 		}
+
+		public function between(from:Number, to:Number, strong:Boolean = false):void
+		{
+			assert(
+					isBetween(expected, from, to, strong),
+					"expected " + expected + " to be between" + from + " and " + to,
+					"expected " + expected + " not to be between" + from + " and " + to
+			);
+		}
+
+		private function isBetween(expected:Number, from:Number, to:Number, strong:Boolean):Boolean
+		{
+			if (strong)
+			{
+				return from <= expected && expected <= to;
+			}
+			return from < expected && expected < to;
+		}
 	}
 }
