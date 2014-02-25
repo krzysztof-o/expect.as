@@ -45,7 +45,7 @@ package specification.expression
 
 		public function contain(element:*):void
 		{
-			var contain:Boolean = checkContain(expected, element);
+			var contain:Boolean = checkContain(element);
 			assert(
 					contain,
 					"expected " + expected + " contain " + element,
@@ -53,7 +53,7 @@ package specification.expression
 			);
 		}
 
-		private static function checkContain(expected:*, element:*):Boolean
+		private function checkContain(element:*):Boolean
 		{
 			if (expected is Array || expected is String)
 			{

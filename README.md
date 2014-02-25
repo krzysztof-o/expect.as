@@ -63,6 +63,7 @@ expect("test").not.to.equal(123);
 ```actionscript
 expect(123).to.be.a(Number);
 expect("test").not.to.be.an(Array);
+expect(sprite).to.be.a("flash.display::Sprite");
 ```
 
 **contain**: asserts that the array contains value
@@ -136,7 +137,6 @@ expect(2).to.be.between(1, 2, true); //3rd parameter means strong inequality
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```
 - ```expect().fail();```
-- ```expect(sprite).to.be.a("flash.display::Sprite");```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals

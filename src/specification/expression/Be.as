@@ -1,5 +1,7 @@
 package specification.expression
 {
+	import flash.utils.getQualifiedClassName;
+
 	import specification.core.Expression;
 	import specification.core.ObjectUtil;
 	import specification.core.RootExpression;
@@ -11,22 +13,31 @@ package specification.expression
 			super(expressionRoot);
 		}
 
-		public function a(givenClass:Class):void
+		public function a(givenClass:*):void
 		{
 			assert(
-					expected is givenClass,
+					isInstanceOfClass(givenClass),
 					"expected " + expected + " to be a" + givenClass,
 					"expected " + expected + " not to be a" + givenClass
 			);
 		}
 
-		public function an(givenClass:Class):void
+		public function an(givenClass:*):void
 		{
 			assert(
-					expected is givenClass,
+					isInstanceOfClass(givenClass),
 					"expected " + expected + " to be an" + givenClass,
 					"expected " + expected + " not to be an" + givenClass
 			);
+		}
+
+		private function isInstanceOfClass(givenClass:*):Boolean
+		{
+			if (givenClass is String)
+			{
+				return getQualifiedClassName(expected) == givenClass;
+			}
+			return expected is givenClass;
 		}
 
 		public function ok():void
@@ -95,13 +106,13 @@ package specification.expression
 		public function between(from:Number, to:Number, strong:Boolean = false):void
 		{
 			assert(
-					isBetween(expected, from, to, strong),
+					isBetween(from, to, strong),
 					"expected " + expected + " to be between" + from + " and " + to,
 					"expected " + expected + " not to be between" + from + " and " + to
 			);
 		}
 
-		private function isBetween(expected:Number, from:Number, to:Number, strong:Boolean):Boolean
+		private function isBetween(from:Number, to:Number, strong:Boolean):Boolean
 		{
 			if (strong)
 			{

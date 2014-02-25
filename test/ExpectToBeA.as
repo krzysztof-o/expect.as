@@ -1,5 +1,7 @@
 package
 {
+	import flash.display.Sprite;
+
 	import specification.expect;
 
 	public class ExpectToBeA
@@ -42,6 +44,27 @@ package
 		public function expectStringToBeAnArray():void
 		{
 			expect("test").to.be.an(Array);
+		}
+
+		//
+		[Test]
+		public function expectSpriteToBeASprite():void
+		{
+			var sprite:Sprite = new Sprite();
+			expect(sprite).to.be.a("flash.display::Sprite");
+		}
+
+
+		[Test(expects="specification.core.ExpectationError")]
+		public function expectStringToBeASprite():void
+		{
+			expect("string").to.be.a("flash.display::Sprite");
+		}
+
+		[Test]
+		public function expectArrayNotToBeASprite():void
+		{
+			expect([1, 2, 3]).not.to.be.a("flash.display::Sprite");
 		}
 
 	}
