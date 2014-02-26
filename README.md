@@ -1,7 +1,7 @@
 expect.as
 =========
 
- BDD-style assertion library for Action Script 3
+BDD-style assertion library for Action Script 3
 
 ![expect.as syntax](http://i.imgur.com/jxi6cj7.gif)
 
@@ -130,13 +130,18 @@ expect(2).to.be.between(1, 3);
 expect(2).to.be.between(1, 2, true); //3rd parameter means strong inequality
 ```
 
+**fail**: throws ExpectationError
+```actionscript
+expect().fail();
+expect().fail("It did not meet expectations");
+```
+
 
 ### TODO
 - ```expect(10).to.be.above(5);```
 - ```expect(5).to.be.below(10);```
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```
-- ```expect().fail();```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals

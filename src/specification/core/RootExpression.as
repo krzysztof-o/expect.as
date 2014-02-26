@@ -35,7 +35,7 @@ package specification.core
 			}
 		}
 
-		public function fail(description:String):void
+		public function fail(description:String = ""):void
 		{
 			throw new ExpectationError(description);
 		}
