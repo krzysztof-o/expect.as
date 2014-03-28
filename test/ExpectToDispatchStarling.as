@@ -6,9 +6,9 @@ package
 
 	import starling.events.EventDispatcher;
 
-	public class TestExpectToDispatchStarling
+	public class ExpectToDispatchStarling
 	{
-		public function TestExpectToDispatchStarling()
+		public function ExpectToDispatchStarling()
 		{
 		}
 

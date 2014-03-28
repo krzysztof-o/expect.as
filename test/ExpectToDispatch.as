@@ -6,9 +6,9 @@ package
 
 	import specification.expect;
 
-	public class TestExpectToDispatch
+	public class ExpectToDispatch
 	{
-		public function TestExpectToDispatch()
+		public function ExpectToDispatch()
 		{
 		}
 
