@@ -140,6 +140,11 @@ expect(10).to.be.above(5)
 expect(5).to.be.below(10)
 ```
 
+**at least**: asserts that expected value is greater or equal to given value
+```actionscript
+expect(5).to.be.at.least(5);
+```
+
 **fail**: throws ExpectationError
 ```actionscript
 expect().fail();

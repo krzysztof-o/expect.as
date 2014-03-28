@@ -13,6 +13,11 @@ package specification.expression
 			super(expressionRoot);
 		}
 
+		public function get at():At
+		{
+			return new At(expressionRoot);
+		}
+
 		public function a(givenClass:*):void
 		{
 			assert(
