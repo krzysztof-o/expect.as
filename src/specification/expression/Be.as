@@ -129,5 +129,14 @@ package specification.expression
 					"expected " + expected + " not to be above " + value
 			);
 		}
+
+		public function below(value:Number):void
+		{
+			assert(
+					expected < value,
+					"expected " + expected + " to be below " + value,
+					"expected " + expected + " not to be below " + value
+			);
+		}
 	}
 }

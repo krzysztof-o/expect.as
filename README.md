@@ -130,10 +130,14 @@ expect(2).to.be.between(1, 3);
 expect(2).to.be.between(1, 2, true); //3rd parameter means strong inequality
 ```
 
-**above**: throws ExpectationError
+**above**: asserts that expected value is greater then given value
 ```actionscript
 expect(10).to.be.above(5)
-expect().fail("It did not meet expectations");
+```
+
+**below**: asserts that expected value is lower then given value
+```actionscript
+expect(5).to.be.below(10)
 ```
 
 **fail**: throws ExpectationError
@@ -145,7 +149,6 @@ expect().fail("It did not meet expectations");
 
 
 ### TODO
-- ```expect(5).to.be.below(10);```
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
