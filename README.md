@@ -130,6 +130,12 @@ expect(2).to.be.between(1, 3);
 expect(2).to.be.between(1, 2, true); //3rd parameter means strong inequality
 ```
 
+**above**: throws ExpectationError
+```actionscript
+expect(10).to.be.above(5)
+expect().fail("It did not meet expectations");
+```
+
 **fail**: throws ExpectationError
 ```actionscript
 expect().fail();
@@ -137,8 +143,8 @@ expect().fail("It did not meet expectations");
 ```
 
 
+
 ### TODO
-- ```expect(10).to.be.above(5);```
 - ```expect(5).to.be.below(10);```
 - ```expect(5).to.be.at.least(5);```
 - ```expect(10).to.be.at.most(10);```

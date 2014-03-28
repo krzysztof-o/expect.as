@@ -120,5 +120,14 @@ package specification.expression
 			}
 			return from < expected && expected < to;
 		}
+
+		public function above(value:Number):void
+		{
+			assert(
+					expected > value,
+					"expected " + expected + " to be above " + value,
+					"expected " + expected + " not to be above " + value
+			);
+		}
 	}
 }
