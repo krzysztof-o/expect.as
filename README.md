@@ -142,7 +142,14 @@ expect(5).to.be.below(10)
 
 **at least**: asserts that expected value is greater or equal to given value
 ```actionscript
+expect(10).to.be.at.least(5);
 expect(5).to.be.at.least(5);
+```
+
+**at most**: asserts that expected value is lower or equal to given value
+```actionscript
+expect(5).to.be.at.most(10);
+expect(10).to.be.at.most(10);
 ```
 
 **fail**: throws ExpectationError
@@ -151,11 +158,7 @@ expect().fail();
 expect().fail("It did not meet expectations");
 ```
 
-
-
 ### TODO
-- ```expect(5).to.be.at.least(5);```
-- ```expect(10).to.be.at.most(10);```
 - Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
 
 ### Features / Goals
