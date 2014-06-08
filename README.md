@@ -159,7 +159,7 @@ expect().fail("It did not meet expectations");
 ```
 
 ### TODO
-- Got an idea for new *expression*? Don't hesitate to create issue or send pull request.
+- Got an idea for new *expression*? Don't hesitate to create an issue or send pull request.
 
 ### Features / Goals
 - BDD-style
