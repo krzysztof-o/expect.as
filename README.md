@@ -41,9 +41,9 @@ expect(100).not.to.be.nill();
 
 **exist**: asserts that the value is not null or undefined
 ```actionscript
-expect(null).not.to.be.exist();
-expect(undefined).not.to.be.exist();
-expect(100).to.be.exist();
+expect(null).not.to.exist();
+expect(undefined).not.to.exist();
+expect(100).to.exist();
 ```
 
 **empty**: asserts that the value is empty
